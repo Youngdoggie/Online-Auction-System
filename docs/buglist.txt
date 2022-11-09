@@ -17,76 +17,78 @@ Bug 0:
 	Method: attribute initialization
 	Line: 12
 	Cause: incorrect initialization of bidderReady that assumed the creation of the bidder succeeded
-	Fix:  default bidderReady value to false
+	Fix:  default bidderReady vaule to false
 
 Bug 1:
-  Class:
-	Method:
-	Line:
-	Cause:
-	Fix:
+  Class:Auction.java
+	Method:Auction
+	Line:28
+	Cause: missing input validation of lastLogNumber
+	Fix: add condition lastLotNumber > 0
 
 Bug 2:
-  Class:
-	Method:
-	Line:
-	Cause:
-	Fix:
+  Class:Lot
+	Method:placeBid()
+	Line:53-105
+	Cause: missing input validation of Bidder
+	Fix: add conditions to verify bidder is valid and bidder input is valid
 
 Bug 3:
-  Class:
-	Method:
-	Line:
-	Cause:
-	Fix:
+  Class:Auction
+	Method:openAuction and closeAuction
+	Line:53-71 and 94
+	Cause: wrong return value on difference state
+	Fix: add conditions to check state and return correct value
 
 Bug 4:
-  Class:
-	Method:
-	Line:
-	Cause:
-	Fix:
+  Class:Bidder
+	Method:feesOwed
+	Line:37
+	Cause: cost was not correctly added by missing a + sign
+	Fix: + sign added
 
 
 
-BUGS FOUND AND FIXED USING EXPECTED INPUT (should be 4-5):
+BUGS FOUND AND FIXED USING EXPECTED INPUT (at least 1):
 
 Bug 5:
-  Class:
-	Method:
-	Line:
-	Cause:
-	Fix:
+  Class:Lot
+	Method: placeBid()
+	Line:56
+	Cause:input missing input validation cause bid not placed
+	Fix: corrected input validation
 
 Bug 6:
-  Class:
-	Method:
-	Line:
-	Cause:
+  Class:OnlineAuctionSystem
+	Method:createAuction
+	Line: 29
+	Cause: auction system is not able to create second auction
+	Fix: condition fixed to generate second auction
 
 Bug 7:
-  Class:
-	Method:
-	Line:
-	Cause:
+  Class:OnlineAuctionStystem
+	Method:auctionStatus
+	Line: 117
+	Cause: auction does not print last status
+	fix: change string status value to print last auction status
 
 Bug 8:
-  Class:
-	Method:
-	Line:
-	Cause:
+  Class:OnlineAuctionSystem
+	Method:createBidder
+	Line:65
+	Cause:create new bidder conditon wrong cause size always = 2
+	fix: make condition bidder != null to bidder == null
+
 
 Bug 9:
-  Class:
-	Method:
-	Line:
-	Cause:
+  Class:OnlineAuctionSystem
+	Method:feesWoed
+	Line:146
+	Cause:for loop run into null value
+	fix: add condition to prevent loop run into null value
 
-(OPTIONAL IF NEEDED) BUGS FOUND BUT NOT FIXED:
 
-Bug 10:
-  Class:
-	Method:
-	Line:
-	Cause:
-	Reason not fixed:
+BUGS FOUND USING EXPECTED INPUT BUT NOT EASILY FIXED (2-3):
+
+
+
