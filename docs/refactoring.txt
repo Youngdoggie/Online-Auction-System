@@ -1,0 +1,5 @@
+1. Make Lot to be an abstract class and reserveLot regularLot and dualminLot extends from that.
+2. Open/Close Principle: Add additional functionality to auction class that shows information of the Lots in auction like what type is the lot.
+3. Interface Segregation Principle: Make an interface for Lot.
+4. Dependency Inversion Principle: In auction class we are creating regular lots based on begining lot number and ending lot number. In the other word that auction
+class is depend on regular Lot which against DIP rules. What we do to fix this is to make a Lot as an interface. 
